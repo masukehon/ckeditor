@@ -1,0 +1,8 @@
+{
+  "name": "ckeditor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/masukehon/ckeditor.git",
+  "author": "masukehon <masuke96@gmail.com>",
+  "license": "MIT"
+}

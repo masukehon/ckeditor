@@ -1,0 +1,28 @@
+<ckeditor
+    name="editor"
+    [config]="{
+      uiColor: '#FFFFFF'
+    }"
+    [(ngModel)]="editorValue"
+    [readonly]="false"
+    (change)="onChange($event)"
+    (editorChange)="onEditorChange($event)"
+    (ready)="onReady($event)"
+    (focus)="onFocus($event)"
+    (blur)="onBlur($event)"
+    (contentDom)="onContentDom($event)"
+    (fileUploadRequest)="onFileUploadRequest($event)"
+    (fileUploadResponse)="onFileUploadResponse($event)"
+    (paste)="onPaste($event)"
+    (drop)="onDrop($event)"
+    debounce="500">
+  </ckeditor>
+
+  <script type="text/javascript">
+    CKEDITOR.replace( 'editor', {
+      extraPlugins: 'imagebrowser',
+      imageBrowser_listUrl: '/files',
+    });
+  </script>
+
+<p>{{ editorValue | json }}</p>
